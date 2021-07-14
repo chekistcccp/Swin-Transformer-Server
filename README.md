@@ -1,6 +1,6 @@
 # Swin-Transformer-Serve
 
-Deploy Pre-trained [Swin-Transformer](https://github.com/microsoft/Swin-Transformer/) classifier trained on ImageNet 1K using [TorchServe](https://github.com/pytorch/serve)
+Deploy Pre-trained [Swin-Transformer](https://github.com/microsoft/Swin-Transformer/) image classifier trained on ImageNet using [TorchServe](https://github.com/pytorch/serve)
 
 ### Create and activate conda env
 ```bash
