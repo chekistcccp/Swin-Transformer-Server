@@ -1,4 +1,4 @@
-# Swin-Transformer-Serve
+# Swin-Transformer-Server
 
 Deploy Pre-trained [Swin-Transformer](https://github.com/microsoft/Swin-Transformer/) image classifier trained on ImageNet using [TorchServe](https://github.com/pytorch/serve)
 
@@ -12,7 +12,7 @@ conda activate STS
 ```bash
 git clone https://github.com/chekistcccp/Swin-Transformer-Server.git
 cd Swin-Transformer-Server
-# clone TorchServe
+# clone TorchServer
 git clone https://github.com/pytorch/serve.git
 cd serve
 # The instruction below is for CPU
