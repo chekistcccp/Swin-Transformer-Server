@@ -10,7 +10,7 @@ conda activate STS
 
 ### Clone and Install dependencies
 ```bash
-git clone https://github.com/kamalkraj/Swin-Transformer-Serve.git
+git clone https://github.com/chekistcccp/Swin-Transformer-Server.git
 cd Swin-Transformer-Serve
 # clone TorchServe
 git clone https://github.com/pytorch/serve.git
