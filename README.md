@@ -11,7 +11,7 @@ conda activate STS
 ### Clone and Install dependencies
 ```bash
 git clone https://github.com/chekistcccp/Swin-Transformer-Server.git
-cd Swin-Transformer-Serve
+cd Swin-Transformer-Server
 # clone TorchServe
 git clone https://github.com/pytorch/serve.git
 cd serve
@@ -43,7 +43,7 @@ pip install torchserve torch-model-archiver torch-workflow-archiver
 For demo we will use Tiny model.
 ```bash
 conda activate STS
-cd Swin-Transformer-Serve
+cd Swin-Transformer-Server
 wget https://github.com/SwinTransformer/storage/releases/download/v1.0.0/swin_tiny_patch4_window7_224.pth -O weights/swin_tiny_patch4_window7_224.pth
 ```
 
@@ -58,7 +58,7 @@ Create MAR file using [torch-model-archiver](https://github.com/pytorch/serve/tr
 
 ```bash
 conda activate STS
-cd Swin-Transformer-Serve
+cd Swin-Transformer-Server
 torch-model-archiver --model-name swin -v 1.0 --model-file swin_transformer.py --serialized-file weights/swin_tiny_patch4_window7_224.pth --handler swin_handler.py --extra-files index_to_name.json,swin_config.yaml --requirements-file requirements.txt
 # move the swin.mar to model_store folder
 mv swin.mar model_store
@@ -69,7 +69,7 @@ Start the `torchserve` using below cmd
 in the config.properties we have set the configurations.[Refer](https://github.com/pytorch/serve/blob/master/docs/configuration.md)
 ```bash
 conda activate STS
-cd Swin-Transformer-Serve
+cd Swin-Transformer-Server
 torchserve --start --ncs --model-store model_store --models swin=swin.mar
 ```
 Use ping API to check the health status of a running TorchServe server:
